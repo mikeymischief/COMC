@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0052)https://beuhdave.github.io/boardgames/comcguide.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>CMOC Interactive Instructions</title>
+<style type="text/css">
+body p {
+	padding-left: 20%;
+	padding-right: 20%;
+}
+</style></head>
+
+<body>
+<p><strong>Guide on making interactive COMC posts</strong></p>
+<p><em>Credits: All credit goes to <a href="https://www.reddit.com/user/KingMaple">u/KingMaple </a>for figuring out the coding as seen in his fantastic <a href="https://www.reddit.com/r/boardgames/comments/5tz7pg/comc_my_interactive_2017_game_collection/">COMC post</a>  which I shamelessly leveraged. Also, a shoutout to James Treworgy for creating the <a href="http://www.outsharked.com/imagemapster/default.aspx?what.html">ImageMapster JQuery	plugin</a> which we'll be using.</em></p>
+<p>1. Take a photo of your board game collection and save in a folder</p>
+<p>2. Download  <a href="https://beuhdave.github.io/boardgames/comctemplate.zip">this</a> zip file and extract all into the same folder as in Step 1. The zip file has 3 files inside: <strong>index.html</strong>, <strong>jquery.imagemapster.min.js</strong>, and <strong>jquery.min.js</strong>.We won't be editing the jQuery files. We'll only be editing index.html</p>
+<p>3. Download  and install <a href="https://notepad-plus-plus.org/">Notepad++</a></p>
+<p>4. Open index.html in Notepad++. </p>
+<p>5. Search for and change "small3.jpg" to the file name of your photo in step 1. The photo should be in the same folder as index.html. Edit the width below to match the width of your photo. For example, "width:1400px" and "width=1400". If you don't want to mess with widths, resize your photo to 1000 pixels width.</p>
+<p><img src="./CMOCInstructions_files/2.jpg" width="658" height="212"></p>
+<p>6. Open up the index.html in your browser and you should  see your photo. The boxes surrounding the games and tooltips now need to be changed.</p>
+<p>7. Go to <a href="http://imagemap-generator.dariodomi.de/">imagemap-generator.dariodomi.de</a> and upload your photo in Step 1. Wait a few seconds and your photo should appear.</p>
+<p>8. Click on each corner of your first board game until it is surrounded. In the image below, Star Wars: Rebellion is surrounded.</p>
+<p><img src="./CMOCInstructions_files/6.jpg" width="800" height="290"></p>
+<p>9. Go to the bottom of the image maping webpage and copy the coordinates in the first box. In this case, the coordinates are "508,581,508,633,776,641,776,589". Ignore the rest of the text. Also, make sure to push "Clear All" to remove all previous coordinates before mapping the coordinates of the next game.</p>
+<p><img src="./CMOCInstructions_files/3.jpg" width="844" height="145"></p>
+<p>10. Go to the first mention of boardgamegeek in index.html and replace the coordinates below with the coordinates that you copied above. Each game will be identified by a different game ID. In this case, it is "game-138".</p>
+<p><img src="./CMOCInstructions_files/4.jpg" width="629" height="187"></p>
+<p>11. Replace or remove the link to the respective boardgamegeek page. A user will be sent to this page when they click inside the coordinates. To remove the hyperlink, delete "href="https://boardgamegeekcom/boardgame/..." target ="_BLANK""</p>
+<p>12. To edit the information that appears when a user hovers over the coordinates, edit the toolTip text replacing the name of the game and your comments. Ensure that this tooltip information is related to the same game ID as above. In this case, "game-138". <strong>Also, if you need to use an apostrophe in the text, you must use \' instead of simply ' as ' is how you end the container for the text.</strong></p>
+<p><img src="./CMOCInstructions_files/1.jpg" width="854" height="256"></p>
+<p><img src="./CMOCInstructions_files/10.jpg" width="796" height="151"></p>
+<p>13. Open up index.html in your browser and hover over your first game. The tooltip and shaded shape should appear when you hover over it.</p>
+<p>14. Repeat steps 7 to 12 for each game shown in the photo. It is helpful to have a dual pane view so that you can edit the tooltips and coordinates for each game without having to scroll. Right click on the index.html tab and select "Clone to other view". You're now editing two parts of the same file at the same time.</p>
+<p><img src="./CMOCInstructions_files/7.jpg" width="500" height="536"></p>
+<p>15. If you have fewer games that are in the template, you should delete extraneous tooltip and coordinate codes. Inversely, if you have more games than in the template, you'll have to add new code. Make sure to create new unique game IDs for each new code that you create. In the example below, if you have 2 fewer games than in the template, delete the last 2 entries. It should look something like below. </p>
+<p><img src="./CMOCInstructions_files/8.jpg" width="500" height="537">  <img src="./CMOCInstructions_files/9.jpg" width="500" height="539"></p>
+<p>16. Save index.html and make sure that everything looks right. You will now have to upload all of this somewhere on the internet. You can use any webhost, but I recommend github pages. It's fast and it's free. </p>
+<p>17. Make a new account at <a href="https://pages.github.com/">pages.github.com</a>. The username that you choose will be part of the public URL. <strong><em>username</em>.github.io</strong></p>
+<p>18. Create a new repository and give it any name. For example, you can name your repository boardgames. This means that the page will be displayed at <em><strong>username</strong></em><strong>.github.io/boardgames/</strong></p>
+<p>19. For the repository to be published on the internet, go to your repository page, click on "Settings" next to a gear icon and go down to "Source" and select "master branch". You'll also find your public URL here.</p>
+<p><img src="./CMOCInstructions_files/5.jpg" alt="" width="928" height="281"></p>
+<p>20. If you want to upload the files manually, go back to your repository page, upload the 4 files: <strong>index.html</strong>, <strong>jquery.imagemapster.min.js</strong>,  <strong>jquery.min.js</strong> and <strong>your photo file</strong>. You can also use the <a href="https://desktop.github.com/">github desktop tool</a> if you want to automatically synchronize the folder in your computer with github. Install the tool, login and point it to the folder where you have all of your files on your computer. Once you've made a change, make sure you add a summary text and then push "Commit to master" and then "Sync". You won't be able to commit any changes without a summary. The modified files will  then be uploaded to github which should appear momentarily online. </p>
+<p><img src="./CMOCInstructions_files/11.jpg" alt="" width="800" height="469"></p>
+<p>21. Navigate to your public URL that you found in settings. That's it!</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+
+</body></html>
