@@ -1,0 +1,763 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width"/>
+	<title>Check Out My Collection</title>
+	<style>
+		.tooltip {
+			border:2px solid #f7eed7;
+			border-radius:4px;
+			padding:10px;
+			margin-bottom:10px;
+			margin-left:0px;
+			background-color:#f7eed7;
+			font:12px Verdana;
+			line-height:18px;
+			box-shadow: 0px 3px 10px grey;
+		}
+			a {
+				cursor:pointer;
+				color:blue;
+				text-align: center
+			}
+			a:hover {
+				color:black;
+			}
+			label {
+				display:inline-block;
+				width:250px;
+				text-align:right;
+				padding:5px;
+			}
+			a:link {
+				color:blue;
+				text-decoration: underline;
+			}
+	</style>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.imagemapster.min.js"></script>
+	<script type="text/javascript">
+				$(document).ready(function() {
+			$('img').mapster({
+				fillOpacity: 0.5,
+				render_highlight: {
+					fillColor: 'f7eed7',
+					stroke: true,
+					strokeColor: 'f7eed7'
+				},
+								clickNavigate: true,
+								fadeInterval: 50,
+				showToolTip: true,
+				onClick: function (e) {
+					$('#coordinateslabel').hide();
+					$('#deletelabel').show();
+					var thisId = e.key;
+					thisId = thisId.replace('game-', '');
+					$('#existing').val(thisId);
+					console.log($('#existing').val());
+					$('#game').val(thisId);
+					$('#description').val($('#hd'+thisId).val());
+				},
+				toolTipContainer: '<div class="tooltip" style="text-align:left;max-width:200px;"></div>',
+				mapKey: 'data-key',
+				areas: [
+													{
+									key: 'game-138',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>The Gallerist</b><br/>The Gallerist is a beautiful game where you buy and sell pieces of art. It is quite a heavy as most of Vital Lacerda\'s games. I like complex games, but I am not sure if I will be keeping this.'
+								}
+							,								{
+									key: 'game-189',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Tuscany: Expand the World of Viticulture </b><br/>This is the expansion for Viticulture. If you have Viticulture, you should seriously consider getting this expansion as the larger board makes the game much more interesting. You should drink heavily while playing.'
+								}
+							,								{
+									key: 'game-9',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Agricola: All Creatures Big and Small </b><br/>I have never played Agricola, but I do love this smaller 2 player Agricola game. It\'s quick and easy and lots of fun. Who knew animal husbandry can be so fun.'
+								}
+							,								{
+									key: 'game-182',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>San Juan</b><br/>This is one the first modern board games that I\'ve played. I must have played this over 100 times--well until I discovered Race for the Galaxy. Highly recommended.</i>'
+								}
+							,								{
+									key: 'game-155',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Codenames: Pictures</b><br/>I prefer Codenames:Pictures over the original codenames. The photos gives it an extra level of interpretation making the game more exciting. This is my default party game for new boardgamers.'
+								}
+							,								{
+									key: 'game-141',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Twilight Struggle</b><br/>This is one of my all time favorite games. The design is elegant as it perfectly captures the feel of the cold war. The iPad and steam versions are also highly recommended.'
+								}
+							,								{
+									key: 'game-255',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Race for the Galaxy: Rebel vs Imperium</b><br/>This is the 2nd expansion to Race for the Galaxy. I like the new cards, but I don\'t play with the takeover rules. It is worth it just for the new cards.'
+								}
+							,								{
+									key: 'game-128',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Ticket to Ride: Europe</b><br/>This is one of the first moderm games that I\'ve played. It\'s a classic. I prefer the Europe map over the original version as it seems more grand.'
+								}
+							,								{
+									key: 'game-250',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Kremlin</b><br/>Never played this yet as it requires more than 2 players. I picked this up just because the russian political theme appeals to me. To be Stalin or Lenin?'
+								}
+							,								{
+									key: 'game-249',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Twilight Imperium</b><br/>I just picked this up a few days ago, so I have not had a chance to play yet. I can\'t wait to see what all the fuss is about. It\'s a 4x epic space opera. I\'m sure that I\'ll like it--assuming I can ever get that many people to dedicate a day to this'
+								}
+							,								{
+									key: 'game-97',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Mage Wars</b><br/>I just received this in a trade last week, so I also haven\'t tried it yet. It sounds like it is a bit similar to Summoner Wars which I like, so it should be good.'
+								}
+							,								{
+									key: 'game-91',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Terra Mystica</b><br/>Never played. On my to-do list. I like worker placement and strategy so I should like this.'
+								}
+							,								{
+									key: 'game-257',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Pandemic Legacy: Season 1</b><br/>I am going to get some hate for this, but I don\'t think that pandemic legacy is as great as everyone says it is. It is a fun co-op game, and I like the legacy aspect, but I wasn\'t a huge fan of the original pandemic, so I guess it\'s not surprising. I don\'t think that it should be #1.'
+								}
+							,								{
+									key: 'game-136',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Stockpile</b><br/>This is probably the best stock investment board game out right now. It is very easy to play and teach.'
+								}
+							,								{
+									key: 'game-130',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dungeon Petz</b><br/>Never played yet. I hear that it plays well with 2 players though.'
+								}
+							,								{
+									key: 'game-8',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Specter Ops</b><br/>I like the idea of hidden movement games, but I have not played yet. If this plays well, I may pick up Letters from Whitechapel or Fury of Dracula while it is still in print.'
+								}
+							,								{
+									key: 'game-32',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Star Wars: Rebellion</b><br/>This is a pretty epic game. I like it, but it is a bit long for a 2 player game. I am always the rebels as my wife leans towards the dark side. Hiding is what I do best anyways.'
+								}
+							,								{
+									key: 'game-165',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Catan</b><br/>Classic gateway game. I can\'t think of another good trading game, so I will keep this in my collection for now. I will trade you 7 sheep for one wheat. Anyone??'
+								}
+							,								{
+									key: 'game-205',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Kanban</b><br/>This is a mid-heavy game about lean manufacturing of automobiles. I love the concept, but I have not played yet.'
+								}
+							,								{
+									key: 'game-293',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Blood Rage</b><br/>I bought this during the hype, but I have not had a chance to play yet. The miniatures are beautiful and the gameplay seems well thought out.'
+								}
+							,								{
+									key: 'game-14',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders:Babel</b><br/>I only played this a few times, but the modules seem too different from the base game. I will probably trade this.'
+								}
+							,								{
+									key: 'game-135',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders</b><br/>I have a soft spot for 7 Wonders. I love the simultaneaous card drafting mechanism as the game time does not increase when you add more players. That is rare. I played this a lot as I had to duck tape the box to hold everything together.'
+								}
+							,								{
+									key: 'game-30',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Summoner Wars: Master Set </b><br/>This is a very interesting variable player power games. It is all card based and you navigate around a board attacking each other. It plays quite fast too. A great 2 player game.'
+								}
+							,								{
+									key: 'game-56',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dead of Winter: The Long Night</b><br/>I pre-ordered this during the Dead of Winter hype, but I have not played it yet.'
+								}
+							,								{
+									key: 'game-51',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dead of Winter: A Crossroads Game</b><br/>Dead of Winter is a great game. I am just not sure that the crossroads cards make a difference in the game. Most of the time, they do nothing as we didn\'t have those characters in play. and... I got another bite wound'								}
+							,								{
+									key: 'game-150',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Kingsburg</b><br/>This is essentially a worker placement game with dice. I got this in a trade. I also have not played this yet. Don\'t judge me!'
+								}
+							,								{
+									key: 'game-d344',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Betrayal at House on the Hill</b><br>This game is so fun! The rules are a bit unclear and some of the scenarios are very anticlimactic, but I still love it. You look like a traitor to me. The haunt hasn\'t even begun yet. I\'m just saying that you look like a traitor...'
+								}
+							,								{
+									key: 'game-245',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Through the Ages: A New Story of Civilization </b><br/>One of my favorite long heavy 2 player games. It doesn\'t hit the table very often, but the depth of the game is mind boggling. I would like to try Nations one day to compare.'
+								}
+							,								{
+									key: 'game-107',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Scythe</b><br/>This truly was the game of 2016. It has variable player powers, area control, and worker placement mechanisms. What more can you ask for. The artwork and board are also gorgeous. I am vain like that.'
+								}
+							,								{
+									key: 'game-117',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Memoir 44</b><br/>My wife is not too keen on this game, but I will force her to play with me some more. I like the hand management aspect and how each scenario is based on real life battles.'
+								}
+							,								{
+									key: 'game-288',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>A Game of Thrones: The Card Game</b><br/>I have not played this yet, but I would love to. It seems like if the cards fit the theme of the books very well.'
+								}
+							,								{
+									key: 'game-116',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Cosmic Encounter</b><br/>This is probably my favorite 5-6 player game. Variable alien powers, negotiations and back stabbing. A lot of people do not like games that create conflict, but I love them.'
+								}
+							,								{
+									key: 'game-53',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Mission: Red Planet</b><br/>I have not had a chance to play this yet. Do you see a recurring theme?'
+								}
+							,								{
+									key: 'game-132',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dark Moon</b><br/>I bought this as Battlestar Galactica seemed too long. I haven\'t had a chance to try this yet. BSG express can\'t be all bad can it? You are a cylon aren\'t you?'
+								}
+							,								{
+									key: 'game-110',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>A Game of Thrones: The Board Game</b><br/>This has to be my favorite game of all the time. It has blind auctions, area control and negotiations. There is a lot of strategy and depth to this game. I want to try the variant where you use  post-its to send secret messages to each other and the person with the raven can intercept one message. I should get this to the table more often.'
+								}
+							,								{
+									key: 'game-95',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Space Alert</b><br/>I am not sure how I feel about movement programming games. This game is so stressful. Captain Sonar and Mechs and Minions are probably not for me.'
+								}
+							,								{
+									key: 'game-126',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>The Voyages of Marco Polo</b><br/>I love worker placement games, but I have not tried this yet. I\'ve been busy...'
+								}
+							,								{
+									key: 'game-190',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Star Trek: Frontiers</b><br/>I hear great things about Mage Knight and I am a trekker so this seems like a no brainer. I haven\'t tried yet though. I am a bit disappointed by the screen captures, but that is what you get with Wizkids.'
+								}
+							,								{
+									key: 'game-11',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Caverna: The Cave Farmers</b><br/>One of my favorite games. I do not usually win, but I enjoy playing it just the same. I just need one more dwarf...'
+								}
+							,								{
+									key: 'game-183',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Betrayal at House on the Hill: Widows Walk </b><br/>This is the expansion for Betrayal. I hear that it has new scenarios, but I don\'t think that they fixed the rules. To be played.'
+								}
+							,								{
+									key: 'game-62',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Viticulture Essential Edition</b><br/>I haven\'t played Vinhos, but I think that Stegmaier\'s games suit me better than Lacerda\'s. The design of this game is incredible.'
+								}
+							,								{
+									key: 'game-172',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Coup: Rebellion G54</b><br/>I like Coup, but some of the characters do not play well together or are not very fun, so I have to pick the characters carefully.'
+								}
+							,								{
+									key: 'game-81',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Puerto Rico</b><br/>Another classic game that I have not tried yet. I like San Juan and Race for the Galaxy, so I should like this.'
+								}
+							,								{
+									key: 'game-129',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>T.I.M.E Stories</b><br/>I hear that you can only play this once. I am waiting for the right time to play this.'
+								}
+							,								{
+									key: 'game-20',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Power Grid</b><br/>I also have not played this game. Math in a board game? Sounds good to me'
+								}
+							,								{
+									key: 'game-10',
+																			selected: false,
+																		isSelectable: false,	
+									isDeselectable: false,
+																		toolTip: '<b>Citadels</b><br/>I just picked up this little game. It is very elegant. I may pick up the new Citadels 2016 version and trade this classic version.'
+								}
+							,								{
+									key: 'game-78',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Innovation: Echoes of the Past</b><br/>This is the expansion to Innovation. There is a new Innovation Deluxe set out in Kickstarter right now.'
+								}
+							,								{
+									key: 'game-206',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Race for the Galaxy: The Gathering Storm</b><br/>The first expansion to Race for the Galaxy. I like the new goals and cards. This expansion is almost a necessity.'
+								}
+							,								{
+									key: 'game-164',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Bang! The Dice Game</b><br/>A great little filler game. I don\'t think that my group plays this game correctly as I always know who everyone is...'
+								}
+							,								{
+									key: 'game-243',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Carcassonne: Expansion 1 – Inns & Cathedrals</b><br/>This is my favorite expansion for Caracassonne. I can\'t imagine playing this game without it.'
+								}
+							,								{
+									key: 'game-263',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Carcassonne: Hills & Sheep</b><br/>I have not tried this expansion yet.'
+								}
+							,								{
+									key: 'game-260',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Viticulture: Moor Visitors Expansion</b><br/>This expansion adds a number of cards. When Uwe Rosenberg wants to design an expansion for your game, you know that you have a good game.'
+								}
+							,								{
+									key: 'game-52',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>The Resistance: Avalon</b><br/>After codenames, this is the party game that my group plays the most. It is a fun social deduction game, but some people are not comfortable lying. Challenge accepted.'
+								}
+							,								{
+									key: 'game-154',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Cosmic Encounter: Cosmic Incursion</b><br/>I bought this expansion for the extra reward deck. I can\'t imagine playing Cosmic without it.'
+								}
+							,								{
+									key: 'game-37',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Innovation</b><br/>Innovation is an ingenious little game. It really makes you think. It plays great at 2 players as well.'
+								}
+							,								{
+									key: 'game-121',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Go</b><br/>I find it amazing that this game is 2,500 years old. Easy game to play, but hard to master.'
+								}
+							,								{
+									key: 'game-64',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders: Cities</b><br/>This is a worthwhile expansion to 7 Wonders. It adds new cards and new boards.'
+								}
+							,								{
+									key: 'game-242',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders: Leaders</b><br/>This is my favorite expansion to 7 Wonders. I like the idea of controlling military generals while building my civilization and crushing my opponents.'
+								}
+							,								{
+									key: 'game-275',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Stockpile: Continuing Corruption</b><br/>This expansion adds bonds, forecasts dice and other investors. If you like Stockpile, you will probably like this expansion.'
+								}
+							,								{
+									key: 'game-173',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Chess</b><br/>I probably spend more time playing chess than all other board games combined. I am not very good, but I try.'
+								}
+							,								{
+									key: 'game-285',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>MindTrap</b><br/>This is a logic puzzle game. There are various cards with different scenarios where you have to try to find the solution. Some of the puzzles are clever, while others are less so.'
+								}
+							,								{
+									key: 'game-272',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>DGT North American Chess Clock</b><br/>This is my chess clock. I usually play with the Fischer increment.'
+								}
+							,								{
+									key: 'game-268',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Carcassonne</b><br/>While often compared to Battlestar Galactica, it is very different from it. This is an intrigue filled semi-cooperative and quite a bit selfish strategy game of managing a city that is in chaos while still getting a profit. This game - set in the Android universe - is full of tense negotiations and deals as well an incredibly unique winning conditions where a player is usually only competing against one other player.<br/><i style="font-weight:bold;color:#3ad18a">first time in collection</i>'
+								}
+							,								{
+									key: 'game-262',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Carcasonne</b><br/>I think that this is the game got me into modern boardgaming. When I first played Carcassonne, I was blown away as I never knew that such games existed. Down the rabbit hole I went.'
+								}
+							,								{
+									key: 'game-266',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Rummikub</b><br/>I used to play this with a regular deck of cards, so I got the dedicated tile set. Rummy is one of my favorite 2-4 card games.'
+								}
+							,								{
+									key: 'game-278',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Beyond Balderdash</b><br/>I almost never play this, but it can be fun once and a while.'
+								}
+							,								{
+									key: 'game-35',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Scattergories</b><br/>I also never play this anymore, but I keep it for nostalgia purposes.'
+								}
+							,								{
+									key: 'game-122',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>A Game of Thrones: The Board Game – A Dance with Dragons</b><br/>This is an expansion that gives you new house cards and an alternate starting setup. I have not tried this yet.'
+								}
+							,								{
+									key: 'game-5',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>A Game of Thrones: The Board Game – A Feast for Crows</b><br/>This is a 4 player expansion with alternate rules and setup. This variant should be much faster than the original game. I have not played yet.'
+								}
+							,								{
+									key: 'game-248',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>We Didnt Playtest This At All</b><br/>This can hardly be described as a game, but it can be very fun if you are drinking very heavily. There are almost no rules to this card game. You pick up cards and they will have certain instructions on them. It is chaos in a box.'
+								}
+							,								{
+									key: 'game-289',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>The Resistance</b><br/>I mostly only play Avalon these days, so the Resistance does not see much play.'
+								}
+							,								{
+									key: 'game-59',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Coup: Reformation</b><br/>This expansion replaces the ambassador card and adds a new cards allowing you to play up to 10 players.'
+								}
+							,								{
+									key: 'game-92',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Sushi Go!</b><br/>I like card drafting, but this game may be too light for me. I will probably trade this away.'
+								}
+							,								{
+									key: 'game-3',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Fairy Tale</b><br/>I like that this comes in a very small box that is portable. I have not tried yet, but I like card drafting, so I have high hopes.'
+								}
+							,								{
+									key: 'game-146',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>One Night Ultimate Werewolf</b><br/>I am not certain if I like Werewolf or Avalon more. They are different to me, so I will keep both.'
+								}
+							,								{
+									key: 'game-151',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>7 Wonders Duel</b><br/>This is a fantastic 2 player game. It uses similar iconography as 7 Wonders, but the game is quite different.'
+								}
+							,								{
+									key: 'game-61',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>T.I.M.E Stories: The Marcy Case</b><br/>This is an expansion to TIME stories, which I have not played yet.'
+								}
+							,								{
+									key: 'game-50',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Spyfall</b><br/>Spyfall is a great party game, but it has generally been a miss with my group for some reason.'
+								}
+							,								{
+									key: 'game-1',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Treasure Chest</b><br/>I bought this for the extra cards for San Juan, but it also has an expansion for Puerto Rico.'
+								}
+							,								{
+									key: 'game-259',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Thurn and Taxis</b><br/>I got this for free. I have not played yet.</i>'
+								}
+							,								{
+									key: 'game-163',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Gloomhaven</b><br/>WOW! This game blows my mind. I am glad that I did not try to sell this game. This game is essentially skyrim in a box. I don\'t really play anything other than Gloomhaven these days.'
+								}
+							,								{
+									key: 'game-29',
+																			selected: false,
+																		isSelectable: false,
+									isDeselectable: false,
+																		toolTip: '<b>Dominion</b><br/>I\'ve put Dominion and the Prosperity expansion in a binder for easy storage and setup. I have played a lot of Dominion, but not for a while.'
+								}
+							,								
+											]
+			});
+					});
+				var width = 1000;
+		var height = 1371;
+		var multiplier = 2;
+		function smaller(){
+			width = width/2;
+			height = height/2;
+			multiplier = multiplier*2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		function bigger(){
+			width = width*2;
+			height = height*2;
+			multiplier = multiplier/2;
+			$('#zoom').val(multiplier);
+			$('#container').animate({
+				width:width
+			}, 500, function() {});
+			$('img').mapster('resize',width,height,500);
+		}
+		
+			</script>
+</head>
+	<body style="text-align:center;background-color:#eff0f2;font:12px Verdana;">
+					<p style="font-size:20px;"></p>
+			<div id="container" style="width:1000px;margin:15px auto 15px auto;">
+				<img id="picture" src="small3.jpg" id="picture" width="1000" style="border:1px solid blue;" usemap="#map"/>
+				<map name="map" id="map">									<area href="https://www.boardgamegeek.com/boardgame/125153/gallerist" target="_BLANK" data-key="game-138" tooltip="" href="#" shape="poly" coords="8,19,6,100,329,105,329,23" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/147101/tuscany-expand-world-viticulture" target="_BLANK" data-key="game-189" tooltip="" href="#" shape="poly" coords="333,4,333,111,560,113,561,10" />
+																	<area href="https://www.boardgamegeek.com/boardgame/119890/agricola-all-creatures-big-and-small" target="_BLANK" data-key="game-9" tooltip="" href="#" shape="poly" coords="563,20,563,70,770,72,770,23" />
+																	<area href="https://www.boardgamegeek.com/boardgame/8217/san-juan" target="_BLANK" data-key="game-182" tooltip="" href="#" shape="poly" coords="772,28,961,28,962,71,771,72" />
+																	<area href="https://www.boardgamegeek.com/boardgame/198773/codenames-pictures" target="_BLANK" data-key="game-155" tooltip="" href="#" shape="poly" coords="969,18,969,71,1134,71,1131,18" />
+																	<area href="https://www.boardgamegeek.com/boardgame/12333/twilight-struggle" target="_BLANK" data-key="game-141" tooltip="" href="#" shape="poly" coords="1170,38,1171,89,1404,90,1404,39" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/40210/race-galaxy-rebel-vs-imperium" target="_BLANK" data-key="game-255" tooltip="" href="#" shape="poly" coords="1404,24,1406,88,1548,87,1544,20" />
+																	<area href="https://www.boardgamegeek.com/boardgame/14996/ticket-ride-europe" target="_BLANK" data-key="game-128" tooltip="" href="#" shape="poly" coords="17,103,329,106,325,176,16,174" />
+																	<area href="https://www.boardgamegeek.com/boardgame/196/kremlin" target="_BLANK" data-key="game-250" tooltip="" href="#" shape="poly" coords="334,114,333,176,560,177,560,114" />
+																	<area href="https://www.boardgamegeek.com/boardgame/12493/twilight-imperium-third-edition" target="_BLANK" data-key="game-249" tooltip="" href="#" shape="poly" coords="561,72,561,176,1170,176,1169,70" />
+																	<area href="https://www.boardgamegeek.com/boardgame/101721/mage-wars-arena" target="_BLANK" data-key="game-97" tooltip="" href="#" shape="poly" coords="1169,90,1598,87,1598,171,1168,175" />
+																	<area href="https://www.boardgamegeek.com/boardgame/120677/terra-mystica" target="_BLANK" data-key="game-91" tooltip="" href="#" shape="poly" coords="149,242,148,334,381,333,382,242" />
+																	<area href="https://www.boardgamegeek.com/boardgame/161936/pandemic-legacy-season-1" target="_BLANK" data-key="game-257" tooltip="" href="#" shape="poly" coords="128,333,409,335,409,411,128,410" />
+																	<area href="https://www.boardgamegeek.com/boardgame/161614/stockpile" target="_BLANK" data-key="game-136" tooltip="" href="#" shape="poly" coords="121,412,120,482,428,482,426,411" />
+																	<area href="https://www.boardgamegeek.com/boardgame/97207/dungeon-petz" target="_BLANK" data-key="game-130" tooltip="" href="#" shape="poly" coords="120,487,118,559,426,560,425,486" />
+																	<area href="https://www.boardgamegeek.com/boardgame/155624/specter-ops" target="_BLANK" data-key="game-8" tooltip="" href="#" shape="poly" coords="480,262,478,339,789,341,788,260" />
+																	<area href="https://www.boardgamegeek.com/boardgame/187645/star-wars-rebellion" target="_BLANK" data-key="game-32" tooltip="" href="#" shape="poly" coords="480,341,478,477,784,478,784,339" />
+																	<area href="https://www.boardgamegeek.com/boardgame/13/catan" target="_BLANK" data-key="game-165" tooltip="" href="#" shape="poly" coords="478,478,478,561,785,562,782,480" />
+																	<area href="https://www.boardgamegeek.com/boardgame/109276/kanban-automotive-revolution" target="_BLANK" data-key="game-205" tooltip="" href="#" shape="poly" coords="840,265,836,322,1152,325,1152,266" />
+																	<area href="https://www.boardgamegeek.com/boardgame/170216/blood-rage" target="_BLANK" data-key="game-293" tooltip="" href="#" shape="poly" coords="834,326,836,433,1156,432,1152,326" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/154638/7-wonders-babel" target="_BLANK" data-key="game-14" tooltip="" href="#" shape="poly" coords="848,434,849,476,1148,478,1145,434" />
+																	<area href="https://www.boardgamegeek.com/boardgame/68448/7-wonders" target="_BLANK" data-key="game-135" tooltip="" href="#" shape="poly" coords="850,475,850,558,1148,561,1145,476" />
+																	<area href="https://www.boardgamegeek.com/boardgame/93260/summoner-wars-master-set" target="_BLANK" data-key="game-30" tooltip="" href="#" shape="poly" coords="1204,249,1207,335,1519,332,1516,247" />
+																	<area href="https://www.boardgamegeek.com/boardgame/193037/dead-winter-long-night" target="_BLANK" data-key="game-56" tooltip="" href="#" shape="poly" coords="1206,335,1208,410,1515,407,1513,331" />
+																	<area href="https://www.boardgamegeek.com/boardgame/150376/dead-winter-crossroads-game" target="_BLANK" data-key="game-51" tooltip="" href="#" shape="poly" coords="1207,410,1206,483,1518,481,1516,408" />
+																	<area href="https://www.boardgamegeek.com/boardgame/27162/kingsburg" target="_BLANK" data-key="game-150" tooltip="" href="#" shape="poly" coords="1212,483,1212,558,1518,555,1515,482" />
+																	<area href="https://www.boardgamegeek.com/boardgame/10547/betrayal-house-hill" target="_BLANK" data-key="game-d344" tooltip="" href="#" shape="poly" coords="136,580,132,668,411,671,412,585" />
+																	<area href="https://www.boardgamegeek.com/boardgame/182028/through-ages-new-story-civilization" target="_BLANK" data-key="game-245" tooltip="" href="#" shape="poly" coords="139,671,136,746,410,747,410,673" />
+																	<area href="https://www.boardgamegeek.com/boardgame/169786/scythe" target="_BLANK" data-key="game-107" tooltip="" href="#" shape="poly" coords="112,746,113,850,426,850,428,750" />
+																	<area href="https://www.boardgamegeek.com/boardgame/10630/memoir-44" target="_BLANK" data-key="game-117" tooltip="" href="#" shape="poly" coords="111,853,111,924,419,929,419,853" />
+																	<area href="https://www.boardgamegeek.com/boardgame/169255/game-thrones-card-game-second-edition" target="_BLANK" data-key="game-288" tooltip="" href="#" shape="poly" coords="512,582,508,633,775,639,777,588" />
+																	<area href="https://www.boardgamegeek.com/boardgame/39463/cosmic-encounter" target="_BLANK" data-key="game-116" tooltip="" href="#" shape="poly" coords="484,633,480,717,792,717,790,638" />
+																	<area href="https://www.boardgamegeek.com/boardgame/176920/mission-red-planet-second-edition" target="_BLANK" data-key="game-53" tooltip="" href="#" shape="poly" coords="482,719,485,791,792,791,792,716" />
+																	<area href="https://www.boardgamegeek.com/boardgame/111124/dark-moon" target="_BLANK" data-key="game-132" tooltip="" href="#" shape="poly" coords="480,793,480,848,791,849,792,792" />
+																	<area href="https://www.boardgamegeek.com/boardgame/103343/game-thrones-board-game-second-edition" target="_BLANK" data-key="game-110" tooltip="" href="#" shape="poly" coords="480,849,484,924,792,926,792,849" />
+																	<area href="https://www.boardgamegeek.com/boardgame/38453/space-alert" target="_BLANK" data-key="game-95" tooltip="" href="#" shape="poly" coords="828,634,825,874,903,874,900,634" />
+																	<area href="https://www.boardgamegeek.com/boardgame/171623/voyages-marco-polo" target="_BLANK" data-key="game-126" tooltip="" href="#" shape="poly" coords="916,610,915,686,1151,683,1148,610" />
+																	<area href="https://www.boardgamegeek.com/boardgame/182340/star-trek-frontiers" target="_BLANK" data-key="game-190" tooltip="" href="#" shape="poly" coords="906,686,908,768,1168,766,1164,687" />
+																	<area href="https://www.boardgamegeek.com/boardgame/102794/caverna-cave-farmers" target="_BLANK" data-key="game-11" tooltip="" href="#" shape="poly" coords="916,769,915,873,1152,871,1148,765" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/198452/betrayal-house-hill-widows-walk" target="_BLANK" data-key="game-183" tooltip="" href="#" shape="poly" coords="877,871,878,925,1159,923,1159,871" />
+																	<area href="https://www.boardgamegeek.com/boardgame/183394/viticulture-essential-edition" target="_BLANK" data-key="game-62" tooltip="" href="#" shape="poly" coords="1284,614,1284,718,1516,714,1513,609" />
+																	<area href="https://www.boardgamegeek.com/boardgame/148943/coup-rebellion-g54" target="_BLANK" data-key="game-172" tooltip="" href="#" shape="poly" coords="1192,584,1194,787,1285,789,1282,583" />
+																	<area href="https://www.boardgamegeek.com/boardgame/3076/puerto-rico" target="_BLANK" data-key="game-81" tooltip="" href="#" shape="poly" coords="1286,719,1287,789,1517,784,1515,714" />
+																	<area href="https://www.boardgamegeek.com/boardgame/146508/time-stories" target="_BLANK" data-key="game-129" tooltip="" href="#" shape="poly" coords="1219,790,1220,863,1532,859,1529,786" />
+																	<area href="https://www.boardgamegeek.com/boardgame/2651/power-grid" target="_BLANK" data-key="game-20" tooltip="" href="#" shape="poly" coords="1233,865,1235,921,1519,920,1517,865" />
+																	<area href="https://www.boardgamegeek.com/boardgame/478/citadels" target="_BLANK" data-key="game-10" tooltip="" href="#" shape="poly" coords="110,1035,111,1082,244,1081,245,1035" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/92898/innovation-echoes-past" target="_BLANK" data-key="game-78" tooltip="" href="#" shape="poly" coords="113,1084,114,1122,255,1118,252,1080" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/34499/race-galaxy-gathering-storm" target="_BLANK" data-key="game-206" tooltip="" href="#" shape="poly" coords="117,1123,118,1193,261,1188,260,1118" />
+																	<area href="https://www.boardgamegeek.com/boardgame/143741/bang-dice-game" target="_BLANK" data-key="game-164" tooltip="" href="#" shape="poly" coords="113,1190,114,1225,257,1225,255,1189" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/2993/carcassonne-expansion-1-inns-cathedrals" target="_BLANK" data-key="game-243" tooltip="" href="#" shape="poly" coords="114,1225,113,1296,259,1295,259,1224" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/153773/carcassonne-hills-sheep" target="_BLANK" data-key="game-263" tooltip="" href="#" shape="poly" coords="113,1297,113,1368,260,1367,260,1297" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/193823/viticulture-moor-visitors-expansion" target="_BLANK" data-key="game-260" tooltip="" href="#" shape="poly" coords="291,1034,290,1067,392,1069,392,1035" />
+																	<area href="https://www.boardgamegeek.com/boardgame/128882/resistance-avalon" target="_BLANK" data-key="game-52" tooltip="" href="#" shape="poly" coords="273,1067,272,1114,430,1117,429,1069" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/61001/cosmic-encounter-cosmic-incursion" target="_BLANK" data-key="game-154" tooltip="" href="#" shape="poly" coords="292,1116,292,1153,427,1156,426,1117" />
+																	<area href="https://www.boardgamegeek.com/boardgame/63888/innovation" target="_BLANK" data-key="game-37" tooltip="" href="#" shape="poly" coords="280,1157,281,1194,421,1197,421,1157" />
+																	<area href="https://www.boardgamegeek.com/boardgame/188/go" target="_BLANK" data-key="game-121" tooltip="" href="#" shape="poly" coords="286,1198,287,1244,426,1247,426,1198" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/111661/7-wonders-cities" target="_BLANK" data-key="game-64" tooltip="" href="#" shape="poly" coords="278,1248,277,1286,425,1288,427,1249" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/92539/7-wonders-leaders" target="_BLANK" data-key="game-242" tooltip="" href="#" shape="poly" coords="279,1292,282,1331,428,1332,428,1292" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/195034/stockpile-continuing-corruption" target="_BLANK" data-key="game-275" tooltip="" href="#" shape="poly" coords="278,1337,277,1368,417,1364,415,1337" />
+																	<area href="https://www.boardgamegeek.com/boardgame/171/chess" target="_BLANK" data-key="game-173" tooltip="" href="#" shape="poly" coords="465,1181,465,1369,523,1367,525,1179" />
+																	<area href="https://www.boardgamegeek.com/boardgame/1923/mindtrap" target="_BLANK" data-key="game-285" tooltip="" href="#" shape="poly" coords="510,1046,508,1146,611,1148,609,1049" />
+																	<area href="https://www.amazon.com/North-American-Chess-Clock-timer/dp/B00312D2OU/" target="_BLANK" data-key="game-272" tooltip="" href="#" shape="poly" coords="641,1017,644,1074,794,1073,793,1015" />
+																	<area href="https://boardgamegeek.com/boardgame/205716/new-angeles" target="_BLANK" data-key="game-268" tooltip="" href="#" shape="poly" coords="1187,2036,1185,1964,1483,1966,1483,2040" />
+																	<area href="https://www.boardgamegeek.com/boardgame/822/carcassonne" target="_BLANK" data-key="game-262" tooltip="" href="#" shape="poly" coords="612,1075,612,1147,810,1147,810,1073" />
+																	<area href="https://www.boardgamegeek.com/boardgame/811/rummikub" target="_BLANK" data-key="game-266" tooltip="" href="#" shape="poly" coords="532,1149,535,1207,801,1209,800,1147" />
+																	<area href="https://www.boardgamegeek.com/boardgame/1544/beyond-balderdash" target="_BLANK" data-key="game-278" tooltip="" href="#" shape="poly" coords="529,1210,529,1289,805,1287,804,1208" />
+																	<area href="https://www.boardgamegeek.com/boardgame/2381/scattergories" target="_BLANK" data-key="game-35" tooltip="" href="#" shape="poly" coords="525,1290,529,1367,812,1366,808,1289" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/124693/game-thrones-board-game-second-edition-dance-drago" target="_BLANK" data-key="game-122" tooltip="" href="#" shape="poly" coords="841,1049,840,1078,912,1084,912,1051" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/140261/game-thrones-board-game-second-edition-feast-crows" target="_BLANK" data-key="game-5" tooltip="" href="#" shape="poly" coords="838,1081,838,1111,912,1112,912,1082" />
+																	<area href="https://www.boardgamegeek.com/boardgame/31016/we-didnt-playtest-all" target="_BLANK" data-key="game-248" tooltip="" href="#" shape="poly" coords="830,1113,832,1219,908,1220,908,1115" />
+																	<area href="https://www.boardgamegeek.com/boardgame/41114/resistance" target="_BLANK" data-key="game-289" tooltip="" href="#" shape="poly" coords="941,1041,944,1070,1052,1069,1049,1037" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/148931/coup-reformation" target="_BLANK" data-key="game-59" tooltip="" href="#" shape="poly" coords="948,1070,948,1104,1052,1101,1052,1070" />
+																	<area href="https://www.boardgamegeek.com/boardgame/133473/sushi-go" target="_BLANK" data-key="game-92" tooltip="" href="#" shape="poly" coords="946,1105,949,1145,1056,1141,1050,1102" />
+																	<area href="https://www.boardgamegeek.com/boardgame/13823/fairy-tale" target="_BLANK" data-key="game-3" tooltip="" href="#" shape="poly" coords="946,1148,948,1176,1066,1175,1065,1146" />
+																	<area href="https://www.boardgamegeek.com/boardgame/147949/one-night-ultimate-werewolf" target="_BLANK" data-key="game-146" tooltip="" href="#" shape="poly" coords="921,1180,925,1220,1060,1218,1057,1178" />
+																	<area href="https://www.boardgamegeek.com/boardgame/173346/7-wonders-duel" target="_BLANK" data-key="game-151" tooltip="" href="#" shape="poly" coords="846,1221,848,1271,1058,1271,1060,1217" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/180585/time-stories-marcy-case" target="_BLANK" data-key="game-61" tooltip="" href="#" shape="poly" coords="844,1273,840,1315,1056,1314,1053,1271" />
+																	<area href="https://www.boardgamegeek.com/boardgame/166384/spyfall" target="_BLANK" data-key="game-50" tooltip="" href="#" shape="poly" coords="848,1318,848,1367,1060,1367,1058,1316" />
+																	<area href="https://www.boardgamegeek.com/boardgameexpansion/40688/treasure-chest" target="_BLANK" data-key="game-1" tooltip="" href="#" shape="poly" coords="1256,1020,1257,1078,1458,1073,1456,1018" />
+																	<area href="https://www.boardgamegeek.com/boardgame/21790/thurn-and-taxis" target="_BLANK" data-key="game-259" tooltip="" href="#" shape="poly" coords="1252,1081,1254,1154,1488,1152,1484,1078" />
+																	<area href="https://www.boardgamegeek.com/boardgame/174430/gloomhaven" target="_BLANK" data-key="game-163" tooltip="" href="#" shape="poly" coords="1215,1156,1216,1366,1522,1362,1517,1150" />
+																	<area href="https://www.boardgamegeek.com/boardgame/36218/dominion" target="_BLANK" data-key="game-29" tooltip="" href="#" shape="poly" coords="1063,1022,1074,1362,1175,1368,1170,1022" />
+														
+												</map>
+			</div>
+			</p>
+
+</html>
+
